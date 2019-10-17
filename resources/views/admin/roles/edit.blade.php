@@ -26,8 +26,9 @@
                 <label for="permission">{{ trans('cruds.role.fields.permissions') }}*
                     <span class="btn btn-info btn-xs select-all">{{ trans('global.select_all') }}</span>
                     <span class="btn btn-info btn-xs deselect-all">{{ trans('global.deselect_all') }}</span></label>
-                <select name="permission[]" id="permission" class="form-control select2" multiple="multiple" required>
+                    <select name="permission[]" id="permission" class="form-control select2" multiple="multiple" required>
                     @foreach($permissions as $id => $permissions)
+                    {{ var_dump($id, $role) }}
                         <option value="{{ $id }}" {{ (in_array($id, old('permissions', [])) || isset($role) && $role->permissions()->get()->contains($id)) ? 'selected' : '' }}>{{ $permissions }}</option>
                     @endforeach
                 </select>
@@ -41,7 +42,8 @@
                 </p>
             </div>
             <div>
-                <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
+                <input class="btn btn-primary" type="submit" value="{{ trans('global.save') }}">
+                <a class="btn btn-danger" href="{{route('admin.roles.index')}}">Voltar</a>
             </div>
         </form>
 

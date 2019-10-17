@@ -74,7 +74,6 @@ class RolesController extends Controller
             return abort(401);
         }
         $permissions = Permission::get()->pluck('name', 'name');
-
         return view('admin.roles.edit', compact('role', 'permissions'));
     }
 
@@ -106,7 +105,7 @@ class RolesController extends Controller
 
         $role->load('permissions');
 
-        return view('admin.roles.show', compact('role'));
+        return view('admin.roles.show')->with('role',$role);
     }
 
 

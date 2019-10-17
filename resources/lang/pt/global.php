@@ -4,7 +4,7 @@ return [
     'actions'                              => 'Ações',
     'add'                                  => 'Adicionar',
     'allRightsReserved'                    => 'Todos direitos reservados.',
-    'areYouSure'                           => 'Are you sure?',
+    'areYouSure'                           => 'Você tem certeza disto?',
     'clickHereToVerify'                    => 'Clique aqui para verificar',
     'create'                               => 'Criar',
     'dashboard'                            => 'Dashboard',

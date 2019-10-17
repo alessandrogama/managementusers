@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="container mt--8 pb-5 ">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" style=" position: relative; top: 92px;">
             <div class="col-lg-5 col-md-7">
                 <div class="card bg-secondary shadow border-0">
                     <div class="card-body px-lg-5 py-lg-5">
@@ -47,12 +47,7 @@
                                     </span>
                                 @endif
                             </div>
-                            <div class="custom-control custom-control-alternative custom-checkbox">
-                                <input class="custom-control-input" name="remember" id="customCheckLogin" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
-                                <label class="custom-control-label" for="customCheckLogin">
-                                    <span class="text-muted">{{ __('Remember me') }}</span>
-                                </label>
-                            </div>
+           
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary my-4">{{ __('Entrar') }}</button>
                             </div>

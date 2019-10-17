@@ -25,7 +25,7 @@ class UsersController extends Controller
 
         $users = User::all();
 
-        return view('admin.users.index', compact('users'));
+        return view('admin.users.index')->with('users',$users);
     }
 
     /**
@@ -40,7 +40,7 @@ class UsersController extends Controller
         }
         $roles = Role::get()->pluck('name', 'name');
 
-        return view('admin.users.create', compact('roles'));
+        return view('admin.users.create')->with('roles',$roles);
     }
 
     /**
