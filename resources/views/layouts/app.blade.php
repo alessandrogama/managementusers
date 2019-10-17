@@ -18,11 +18,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
-    <link href="{{ asset('../../assets/css/argon.css') }}" rel="stylesheet" />
-    <link href="{{ asset('../../assets/css/argon.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/argon.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/argon.min.css') }}" rel="stylesheet" />
+
     @yield('styles')
 </head>
-
 <body class="header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden login-page background-login">
     <div class="app flex-row align-items-center">
         <div class="container">
@@ -31,5 +31,4 @@
     </div>
     @yield('scripts')
 </body>
-
 </html>

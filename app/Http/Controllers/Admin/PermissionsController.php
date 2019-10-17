@@ -24,7 +24,7 @@ class PermissionsController extends Controller
 
         $permissions = Permission::all();
 
-        return view('admin.permissions.index', compact('permissions'));
+        return view('admin.permissions.index')->with('permissions',$permissions);
     }
 
     /**
@@ -69,7 +69,7 @@ class PermissionsController extends Controller
             return abort(401);
         }
 
-        return view('admin.permissions.edit', compact('permission'));
+        return view('admin.permissions.edit')->with('permission',$permission);
     }
 
     /**
@@ -114,7 +114,7 @@ class PermissionsController extends Controller
             return abort(401);
         }
 
-        return view('admin.permissions.show', compact('permission'));
+        return view('admin.permissions.show')->with('permission',$permission);
     }
 
     /**
